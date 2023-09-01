@@ -3,41 +3,42 @@ import java.util.ArrayList;
 public class Reader {
     private String name;
     private int id;
-    private ArrayList<LibraryItem>  materials = new ArrayList<>();
+    private ArrayList<LibraryItem> materials = new ArrayList<>();
 
-    Reader(String name, int id){
+    Reader(String name, int id) {
         this.name = name;
         this.id = id;
     }
-    public String getName(){
+
+    public String getName() {
         return this.name;
     }
-    public Integer getId(){
+
+    public Integer getId() {
         return this.id;
     }
-    public void rentItem(LibraryItem item){
-        if(item.isAvailable()){
+
+    public void rentItem(LibraryItem item) {
+        if (item.isAvailable()) {
             item.rent();
             materials.add(item);
-        }
-        else{
+        } else {
             System.out.println("Sorry item " + item.getTitle() + " is already rented");
         }
     }
-    public void returnItem(LibraryItem item){
-        if(materials.contains(item)){
+
+    public void returnItem(LibraryItem item) {
+        if (materials.contains(item)) {
             item.returnBack();
             materials.remove(item);
-        }
-        else {
+        } else {
             System.out.println("You can't return this " + item.getTitle() + " because it hasn't been rented yet!");
         }
-
     }
 
-    public ArrayList<LibraryItem> getMaterials(){
+    public ArrayList<LibraryItem> getMaterials() {
         return materials;
     }
- }
+}
 
 
