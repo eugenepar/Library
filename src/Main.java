@@ -1,3 +1,9 @@
+import controllers.Library;
+import controllers.Reader;
+import items.Book;
+import items.Magazine;
+import items.Newspaper;
+
 import java.util.Arrays;
 
 public class Main {

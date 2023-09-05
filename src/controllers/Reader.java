@@ -1,3 +1,7 @@
+package controllers;
+
+import items.LibraryItem;
+
 import java.util.ArrayList;
 
 public class Reader {
@@ -5,7 +9,7 @@ public class Reader {
     private int id;
     private ArrayList<LibraryItem> materials = new ArrayList<>();
 
-    Reader(String name, int id) {
+    public Reader(String name, int id) {
         this.name = name;
         this.id = id;
     }

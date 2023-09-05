@@ -1,3 +1,5 @@
+package interfaces;
+
 public interface Rentable {
     public void rent();
 

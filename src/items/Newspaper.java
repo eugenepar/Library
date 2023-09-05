@@ -1,7 +1,9 @@
+package items;
+
 public class Newspaper extends LibraryItem {
     private int issueNumber;
 
-    Newspaper(String title, int issueNumber) {
+    public Newspaper(String title, int issueNumber) {
         super(title, null);
         this.issueNumber = issueNumber;
     }

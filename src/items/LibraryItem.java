@@ -1,3 +1,8 @@
+package items;
+
+import interfaces.Readable;
+import interfaces.Rentable;
+
 public class LibraryItem implements Readable, Rentable {
     protected String title;
     protected String author;
