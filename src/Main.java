@@ -37,6 +37,8 @@ public class Main {
 
         System.out.println("Get materials from Library");
         System.out.println(library.getMaterials());
+
+        System.out.println("Get items by title: Spiderman");
         System.out.println(library.getItemsByTitle("Spiderman"));
         Reader reader = new Reader("Eugene", 22);
         library.rent(reader, book);
