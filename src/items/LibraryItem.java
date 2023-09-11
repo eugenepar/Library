@@ -1,4 +1,9 @@
-public class LibraryItem implements Readable,Rentable {
+package items;
+
+import interfaces.Readable;
+import interfaces.Rentable;
+
+public class LibraryItem implements Readable, Rentable {
     protected String title;
     protected String author;
     protected boolean is_available;
@@ -28,7 +33,6 @@ public class LibraryItem implements Readable,Rentable {
         } else {
             System.out.println("Not available! Somebody took  " + title + " !!! Loser!!!");
         }
-
     }
 
     public void returnBack() {
@@ -39,8 +43,8 @@ public class LibraryItem implements Readable,Rentable {
             is_available = true;
         }
     }
-    public String toString(){
+
+    public String toString() {
         return this.title + this.author;
     }
-
 }

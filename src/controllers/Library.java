@@ -1,3 +1,7 @@
+package controllers;
+
+import items.LibraryItem;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -44,7 +48,6 @@ public class Library {
         reader.rentItem(item);
         readerHistory.putIfAbsent(reader, new ArrayList<>());
         readerHistory.get(reader).add(item);
-
     }
 
     public void returItem(Reader reader, LibraryItem item) {
@@ -52,13 +55,10 @@ public class Library {
         if (readerHistory.containsKey(reader)) {
             readerHistory.get(reader).remove(item);
         }
-
     }
 
     public HashMap<Reader, ArrayList<LibraryItem>> getReaderHistory() {
         return readerHistory;
     }
-
-
 }
 
